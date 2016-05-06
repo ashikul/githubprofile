@@ -3,8 +3,10 @@ import RepoList from './RepoList.jsx';
 
 class Profile extends React.Component {
   render() {
+
+    var profileDate = new Date(this.props.userData.created_at);
     return (
-      <div className="panel panel-default">
+      <div className="panel panel-default ProfilePanelBox">
         <div className="panel-heading">
           <h3 className="panel-title">{this.props.userData.name}</h3>
         </div>
@@ -29,6 +31,7 @@ class Profile extends React.Component {
                     <li className="list-group-item"><strong>Username:</strong> {this.props.userData.login}</li>
                     <li className="list-group-item"><strong>Location:</strong> {this.props.userData.location}</li>
                     <li className="list-group-item"><strong>Blog address:</strong> <a href={this.props.userData.blog}>{this.props.userData.blog}</a></li>
+                    <li className="list-group-item"><strong>Profile Created:</strong> {profileDate.toDateString()}</li>
                   </ul>
                 </div>
               </div>

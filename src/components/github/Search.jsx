@@ -14,7 +14,7 @@ class Search extends React.Component {
     return (
       <div>
         <form onSubmit={this.onSubmit.bind(this)}>
-          <label>Search GitHub Users</label>
+          <label>Search GitHub User</label>
           <input type="text" ref="username" className="form-control"/>
         </form>
       </div>

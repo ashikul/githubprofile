@@ -1,5 +1,5 @@
 {
-  "name": "mygithub",
+  "name": "github profile viewer",
   "version": "0.0.1",
   "description": "Get and display user GitHub info",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "build": "node node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Eduard Luhtonen <luhtonen@gmail.com> (http://luhtonen.github.io/)",
+  "author": "ashikul",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.6.0",

@@ -79,8 +79,8 @@ App.propTypes = {
   clientSecret: React.PropTypes.string
 };
 App.defaultProps = {
-  clientId: 'a3dff14c18490e671786',
-  clientSecret: '573337655768833fc1e37f440879c652fe18c603'
+  clientId: 'e31874ea9913ef34d535',
+  clientSecret: '46a5fc3e1ff63e4df2e57b665311a3f0713e2d02'
 };
 
 export default App;

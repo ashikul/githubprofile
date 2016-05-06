@@ -7,12 +7,12 @@ class RepoList extends React.Component {
       <div>
         <table className="fixed">
           <tr>
-            <th>Name</th>
+            <th width="20%">Project</th>
             <th>Description</th>
-            <th>Language</th>
-            <th>Stars</th>
-            <th>Forks</th>
-            <th>Date Created</th>
+            <th width="10%">Language</th>
+            <th width="5%">Stars</th>
+            <th width="5%">Forks</th>
+            <th width="15%">Date Created</th>
           </tr>
 
               {

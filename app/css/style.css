@@ -12,12 +12,25 @@ table {
   width: 100%;
 }
 th {
+  color: black;
   text-align: left;
   background: #f8f8f8;
   font-weight: bold;
   padding: 2px;
+  border-left: 1px solid black;
 }
 
+table tr {
+  border-left: 1px solid white;
+}
+td{
+  border: 1px solid #3e4245;
+  padding-left: 5px;
+}
 
 table.fixed { table-layout:fixed; }
 table.fixed td { overflow: hidden; }
+
+a {
+  color: #2aabd2;
+}

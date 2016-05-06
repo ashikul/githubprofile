@@ -15,13 +15,13 @@ class RepoList extends React.Component {
             <th>Date Created</th>
           </tr>
 
-          {
-            this.props.userRepos.map(repo => {
-              return <Repo repo={repo} key={repo.id} {...this.props}/>
-            })
-          }
+              {
+                this.props.userRepos.map(repo => {
+                  return <Repo repo={repo} key={repo.id} {...this.props}/>
+                })
+              }
 
-        </table>
+          </table>
       </div>
     )
   }

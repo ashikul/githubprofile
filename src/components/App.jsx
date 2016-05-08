@@ -10,6 +10,7 @@ class App extends React.Component {
       username: 'ashikul',
       userData: [],
       userRepos: [],
+      userStars: [],
       perPage: 300
     };
   }
@@ -52,16 +53,38 @@ class App extends React.Component {
     });
   }
 
+  // Get user starsrepos
+  getUserStars() {
+    $.ajax({
+      //TODO: get corect api url
+      url: 'https://api.github.com/users/' + this.state.username + '/repos?per_page=' + this.state.perPage + '&client_id=' + this.props.clientId + '&client_secret=' + this.props.clientSecret + '&sort=created' + '&direction=asc',
+      dataType: 'json',
+      cache: false,
+      success: ((data) => {
+        console.log(data);
+        this.setState({
+          userStars: data
+        });
+      }),
+      error: ((xhr, status, err) => {
+        this.setState({username: null});
+        alert(err);
+      })
+    });
+  }
+
   handleFormSubmit(username) {
     this.setState({username}, function () {
       this.getUserData();
       this.getUserRepos();
+      this.getUserStars();
     });
   }
 
   componentDidMount() {
     this.getUserData();
     this.getUserRepos();
+    this.getUserStars();
   }
 
   render() {

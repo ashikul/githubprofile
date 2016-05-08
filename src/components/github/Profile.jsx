@@ -1,5 +1,6 @@
 import React from 'react';
 import RepoList from './RepoList.jsx';
+import StarList from './StarList.jsx';
 
 class Profile extends React.Component {
   render() {
@@ -43,6 +44,10 @@ class Profile extends React.Component {
           <hr />
           <h3>User Repositories</h3>
           <RepoList userRepos={this.props.userRepos} />
+
+          <h3>User Stars</h3>
+          <StarList userStars={this.props.userStars} />
+
         </div>
       </div>
     );

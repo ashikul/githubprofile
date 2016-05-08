@@ -1,22 +1,22 @@
 import React from 'react';
 
-class Repo extends React.Component {
+class Star extends React.Component {
   render() {
-    const {repo} = this.props;
-    var repoDate = new Date(repo.created_at);
+    const {star} = this.props;
+    var starDate = new Date(star.created_at);
 
     return (
 
       <tr>
-        <td><a href={repo.html_url}>{repo.name}</a></td>
-        <td>{repo.description}</td>
-        <td>{repo.language}</td>
-        <td>{repo.stargazers_count}</td>
-        <td>{repo.forks}</td>
-        <td>{repoDate.toDateString()}</td>
+        <td><a href={star.html_url}>{star.name}</a></td>
+        <td>{star.description}</td>
+        <td>{star.language}</td>
+        <td>{star.stargazers_count}</td>
+        <td>{star.forks}</td>
+        <td>{starDate.toDateString()}</td>
       </tr>
     )
   }
 }
 
-export default Repo;
+export default Star;

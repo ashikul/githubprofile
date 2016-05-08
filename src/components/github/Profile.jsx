@@ -45,7 +45,7 @@ class Profile extends React.Component {
           <h3>User Repositories</h3>
           <RepoList userRepos={this.props.userRepos} />
 
-          <h3>User Stars</h3>
+          <h3>User Starred Repositories</h3>
           <StarList userStars={this.props.userStars} />
 
         </div>

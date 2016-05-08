@@ -22,7 +22,7 @@ class App extends React.Component {
       dataType: 'json',
       cache: false,
       success: ((data) => {
-        console.log(data);
+        //console.log(data);
         this.setState({
           userData: data
         });
@@ -41,7 +41,7 @@ class App extends React.Component {
       dataType: 'json',
       cache: false,
       success: ((data) => {
-        console.log(data);
+        //console.log(data);
         this.setState({
           userRepos: data
         });
@@ -57,7 +57,7 @@ class App extends React.Component {
   getUserStars() {
     $.ajax({
       //TODO: get corect api url
-      url: 'https://api.github.com/users/' + this.state.username + '/repos?per_page=' + this.state.perPage + '&client_id=' + this.props.clientId + '&client_secret=' + this.props.clientSecret + '&sort=created' + '&direction=asc',
+      url: 'https://api.github.com/users/' + this.state.username + '/starred?per_page=' + this.state.perPage + '&client_id=' + this.props.clientId + '&client_secret=' + this.props.clientSecret + '&sort=created' + '&direction=asc',
       dataType: 'json',
       cache: false,
       success: ((data) => {

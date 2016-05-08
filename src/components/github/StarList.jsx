@@ -1,7 +1,7 @@
 import React from 'react';
 import Star from './Star.jsx';
 
-class RepoList extends React.Component {
+class StarList extends React.Component {
   render() {
     return (
       <div>
@@ -16,8 +16,8 @@ class RepoList extends React.Component {
           </tr>
 
               {
-                this.props.userRepos.map(repo => {
-                  return <Repo repo={repo} key={repo.id} {...this.props}/>
+                this.props.userStars.map(star => {
+                  return <Star star={star} key={star.id} {...this.props}/>
                 })
               }
 
@@ -27,4 +27,4 @@ class RepoList extends React.Component {
   }
 }
 
-export default RepoList;
+export default StarList;
